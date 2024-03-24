@@ -108,13 +108,11 @@ container.style.cssText =
     gap: 24px;
     list-style-type: none;`;
 
-let gallery = new SimpleLightbox('.gallery a');
-// gallery.on('show.simplelightbox', function () {
-//     // do something…
-//     console.log("Hi!");
-// });
-
-
+let gallery = new SimpleLightbox('.gallery a', {
+  captionsData: "alt",
+  captionDelay: 250,
+  captionClass: 'text-center'
+});
 
 // function handleClick(event) {
 //   if (event.target === event.currentTarget) {
