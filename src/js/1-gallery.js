@@ -64,15 +64,10 @@ const images = [
   },
 ];
 
-// Описаний в документації
 import SimpleLightbox from "simplelightbox";
-// Додатковий імпорт стилів
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 const container = document.querySelector(".gallery");
-// container.addEventListener("click", handleClick);
-// container.addEventListener("mouseover", onMouseOn);
-// container.addEventListener("mouseout", onMouseOut)
 
 
 const markup = images
@@ -93,56 +88,9 @@ const markup = images
      
 container.innerHTML = markup;
 
-const imageItem = document.querySelectorAll(".gallery-image");
-[...imageItem].forEach(item =>{
-  item.style.cssText = `
-  width: 360px;
-  height: 240px;`
-});
-
-container.style.cssText =
-    `display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
-    list-style-type: none;`;
-
 let gallery = new SimpleLightbox('.gallery a', {
   captionsData: "alt",
   captionDelay: 250,
   captionClass: 'text-center'
 });
 
-// function handleClick(event) {
-//   if (event.target === event.currentTarget) {
-//     return;
-//   }
-//   event.preventDefault();
-//   const instance = basicLightbox.create(`
-//     <div class="modal">
-//       <img
-//           class="gallery-image"
-//           src="${event.target.dataset.source}"
-//           width="800" 
-//           height="600"
-//         />
-        
-// `)
-//   instance.show();
-// };
-
-// function onMouseOn(event) {
-//   if (event.target === event.currentTarget) {
-//     return;
-//   }
-//   event.target.style.scale = 1.02;
-// }
-
-// function onMouseOut(event) {
-//   if (event.target === event.currentTarget) {
-//     return;
-//   }
-//   event.target.style.scale = 1;
-// }
-// 
