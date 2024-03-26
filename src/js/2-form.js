@@ -3,7 +3,7 @@ const emailInput = form.elements['email'];
 const textareaMessage = form.elements['message'];
 
 const localStorageKey = 'feedback-form-state';
-const container = JSON.parse(localStorage.getItem(localStorageKey)) ?? {};
+let container = JSON.parse(localStorage.getItem(localStorageKey)) ?? {};
 
 emailInput.value = container.input ?? '';
 textareaMessage.value = container.message ?? '';
@@ -23,6 +23,6 @@ form.addEventListener('submit', event => {
   event.preventDefault();
   console.log(container);
   form.reset();
-  delete container;
+  container = {};
   localStorage.removeItem(localStorageKey);
 });
