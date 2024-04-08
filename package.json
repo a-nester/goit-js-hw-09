@@ -15,7 +15,7 @@
   "author": "Oleksandr Nesterenko <a_nester@ukr.net>",
   "license": "ISC",
   "dependencies": {
-    "simplelightbox": "^2.14.2",
+    "simplelightbox": "^2.14.3",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"
   }
